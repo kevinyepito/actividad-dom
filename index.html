@@ -17,6 +17,28 @@
             <p><strong>Calificación: 4.5</strong> </p>
         </article>
         <button class="btn btn-primary">Invitación</button>
+
+        <div class="card">
+            <div class="card-title">Audifonos</div>
+            <div class="card-text">80.000</div>
+        </div>
+        <div class="card">
+            <div class="card-title">PC</div>
+            <div class="card-text">2'800.000</div>
+        </div>
+
+        <button id="destacar" class="btn btn-warning">Destacar producto</button>
+
+        <div class="tareas">
+            <p class="tarea "><span class="incompleta"></span>No ilusionarme</p>
+            <p class="tarea completa"><span class="chulo"></span>Hacer ejercicio</p>
+            <p class="tarea "><span class="incompleta"></span>No rogarle más</p>
+            <p class="tarea completa"><span class="chulo"></span>Estudiar</p>
+            <p class="tarea completa"><span class="chulo"></span>Enviar tareas de Moodle</p>
+            <p class="tarea "><span class="incompleta"></span>Hacer que me quiera</p>
+
+            <button id="tareas-button" class="btn btn-success">MOSTRAR</button>
+        </div>
     </main>
 
 
@@ -26,8 +48,36 @@
         const parrafos = document.getElementsByTagName('p')
 
         boton.addEventListener('click', (e) => {
-            parrafos[parrafos.length - 1].style.color = 'green'
-            parrafos[parrafos.length - 1].innerText = "Recomendada para todos"
+            parrafos[3].style.color = 'green'
+            parrafos[3].innerText = "Recomendada para todos"
+        })
+
+        const buttonDestacar = document.getElementById('destacar')
+        const card = document.querySelector('.card')
+
+        buttonDestacar.addEventListener('click', (e) => {
+            card.style.backgroundColor = 'yellow'
+            card.style.borderColor = 'brown'
+            card.style.color = 'brown'
+        })
+
+        const tareasButton = document.getElementById('tareas-button')
+        const tareas = document.querySelectorAll('.tarea')
+
+
+        tareasButton.addEventListener('click', (e) => {
+            tareas.forEach(tarea => {
+                const span = tarea.querySelector('span')
+                if (tarea.classList.contains('completa')) {
+                    tarea.style.color = 'green'
+                    span.innerText = '✅ '
+
+                } else {
+                    tarea.style.color = 'red'
+                    span.innerText = '❌ '
+                }
+
+            });
         })
 
     </script>
