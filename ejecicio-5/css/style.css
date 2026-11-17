@@ -1,0 +1,33 @@
+.key-top {
+    animation: pressKey 2.2s infinite ease-in-out;
+}
+
+.arrow-icon {
+    animation: arrowSlide 2.2s infinite ease-in-out;
+}
+
+@keyframes pressKey {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    45%,
+    55% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes arrowSlide {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    45%,
+    55% {
+        transform: translate(-2px, 5px);
+    }
+}
