@@ -3,7 +3,14 @@ const error = document.getElementById('error-message')
 const saludo = document.getElementById('saludo')
 const input = document.getElementById('name')
 
-button.addEventListener('click', (e) => {
+button.addEventListener('click', saludar)
+button.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        saludarbutton.addEventListener('click', saludar)
+    }
+})
+
+function saludar() {
     const name = input.value
     if (name) {
         saludo.innerText = `¡Hola ${name}!, Bienvenid@ `
@@ -19,4 +26,4 @@ button.addEventListener('click', (e) => {
         error.innerText = ""
     }
     input.value = ""
-})
+}

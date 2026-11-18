@@ -1,3 +1,16 @@
+body {
+    background-color: rgb(157, 233, 153);
+}
+
+p {
+    color: rgb(0, 60, 112);
+}
+
+ul li {
+    list-style: none;
+    border: solid 1px blue;
+}
+
 .key-top {
     animation: pressKey 2.2s infinite ease-in-out;
 }
