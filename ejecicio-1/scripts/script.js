@@ -1,13 +1,11 @@
-const button = document.getElementById('button')
+const form = document.querySelector('form') // O usa el id de tu formulario
 const error = document.getElementById('error-message')
 const saludo = document.getElementById('saludo')
 const input = document.getElementById('name')
 
-button.addEventListener('click', saludar)
-button.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-        saludarbutton.addEventListener('click', saludar)
-    }
+form.addEventListener('submit', (e) => {
+    e.preventDefault() // Evita que la página se recargue
+    saludar()
 })
 
 function saludar() {
