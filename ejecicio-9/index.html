@@ -5,12 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
+    <main>
+        <form action="" class="container mt-4" style="max-width: 600px;">
+            <div class="row mb-3 align-items-center">
+                <label for="nombre" class="col-sm-5 col-form-label">Ingrese su nombre:</label>
+                <div class="col-sm-7">
+                    <input id="nombre" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="row mb-3 align-items-center">
+                <label for="profesion" class="col-sm-5 col-form-label">Ingrese su profesión:</label>
+                <div class="col-sm-7">
+                    <input id="profesion" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="row mb-3 align-items-center">
+                <label for="imagen" class="col-sm-5 col-form-label">Ingrese url de imagen de perfil:</label>
+                <div class="col-sm-7">
+                    <input id="imagen" type="url" class="form-control">
+                </div>
+            </div>
+        </form>
+
+        <div class="card">
+            <div class="row g-0">
+                <div class="col-5 col-sm-4">
+                    <img id="imagenCard" src="data:image/jpeg;base64,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"
+                        class="img-fluid w-100" alt="card-horizontal-image">
+                </div>
+                <div class="col-7 col-sm-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Pedriton</h5>
+                        <p class="card-text">Despedido de Riwi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
 
 
     <script src="./scripts/script.js"></script>
