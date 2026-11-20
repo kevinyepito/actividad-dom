@@ -28,5 +28,7 @@ form.addEventListener('submit', (e) => {
             <tr><td>${numero} X 10</td><td>${numero * 10}</td></tr>
         </tbody>`
 
+    input.value = ""
+
 
 })
