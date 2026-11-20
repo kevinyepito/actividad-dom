@@ -20,10 +20,9 @@ form.addEventListener('submit', (e) => {
     if (edad < 18) {
         edadSpan.style.color = 'red'
         edadSpan.innerText = 'edad menor a 18'
-        return
     } else {
-
-        edadSpan.innerText = ''
+        edadSpan.style.color = 'green'
+        edadSpan.innerText = 'Registro exitoso'
     }
 
 
