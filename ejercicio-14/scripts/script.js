@@ -24,7 +24,7 @@ form.addEventListener('submit', (e) => {
     restanteValor = presupuesto.value - totalGastado
 
 
-    if (valido) {
+    if (valido && valor.value != "") {
         lista.innerHTML += `<li>${gasto.value}: ${valor.value}</li>`
         gastado.innerText = `${totalGastado}`
         restante.innerText = `${restanteValor}`
