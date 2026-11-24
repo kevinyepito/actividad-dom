@@ -10,6 +10,43 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="" class="d-grid gap-3">
+                    <div>
+                        <label for="presupuesto">Ingrese presupuesto inicial:</label>
+                        <input class="form-control" type="number" name="" id="presupuesto">
+                    </div>
+                    <div>
+                        <label for="gasto">Nombre del gasto: </label>
+                        <input class="form-control" type="text" id="gasto">
+                    </div>
+                    <div>
+                        <label for="valor">Valor del gasto: </label>
+                        <input class="form-control" type="number" id="valor">
+                        <span id="mensaje"></span>
+                    </div>
+                    <button class="btn btn-outline-primary">Agregar gasto</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-6 col-lg-6">
+                <h2>Lista de compras</h2>
+                <ul>
+                </ul>
+            </div>
+            <div class="col-6 col-md-6 col-lg-6">
+                <h2>Resumen</h2>
+                <p>Presupuesto inicial: <span id="inicial"></span></p>
+                <p>Total gastado: <span id="gastado"></span></p>
+                <p>Dinero restante <span id="restante"></span></p>
+            </div>
+        </div>
+    </div>
 
 
     <script src="./scripts/script.js"></script>
